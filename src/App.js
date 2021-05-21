@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
+import { delayImport } from './utils';
 
+const Home = delayImport(import('./pages/Home'))
+const About = delayImport(import('./pages/About'))
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <ul>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/about" component={About} />
+      </Switch>
     </div>
+
   );
 }
 
