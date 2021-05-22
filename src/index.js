@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Loading } from './components/common/Loading';
+// import './styles/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>

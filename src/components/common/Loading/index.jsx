@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import './index.scss';
 
 export const Loading = () => {
     return (
-        <div>
-            Loading...
-        </div>
+        <div class="spinner"></div>
     )
 }
