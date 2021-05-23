@@ -7,3 +7,8 @@
     align-items: $align;
     justify-content: $justify;
 }
+
+@mixin opacity ($level) {
+    filter: alpha(opacity = $level * 100);
+	opacity: $level;
+}

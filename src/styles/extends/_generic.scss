@@ -1,1 +1,23 @@
 @import '../helpers/mixin';
+@import '../helpers/variables';
+
+%enable-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+%ellipse-text {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%clickable {
+    @extend %enable-transition;
+    @include opacity(1);
+    cursor: pointer;
+
+    &:hover {
+        @include opacity(0.6);
+    }
+}
