@@ -9,6 +9,7 @@ const Home = delayImport(import('./pages/Home'));
 const About = delayImport(import('./pages/About'));
 const Contact = delayImport(import('./pages/Contact'));
 const Info = delayImport(import('./pages/Info'));
+const Shipments = delayImport(import('./pages/Shipments'));
 
 function App() {
   const history = useHistory();
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/info" component={Info} />
+        <Route exact path="/shipment" component={Shipments} />
       </Switch>
     </div>
 

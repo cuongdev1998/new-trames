@@ -1,0 +1,41 @@
+@import '../../styles/extends/generic';
+
+.tr__home {
+    width: inherit;
+    min-height: inherit;
+    @include flex(column, center, center);
+    .tr__home--menu {
+        width: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 50px;
+        &__item {
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid rgb(77, 182, 238) ;
+            // box-shadow: 0 2px 2px 5px #f2f2f2;
+            // color: #fff;
+            border-radius: 15px;
+            @include flex(column, center, center);
+            .item__icon {
+              font-size: 25px;
+              color: rgb(77, 182, 238);
+            }
+            h2 {
+              margin-top: 1rem;
+              font-weight: 700;
+              color: #000;
+              font-style: italic;
+            }
+            &:hover {
+              box-shadow: 0 5px 2px 5px rgba(77, 182, 238, .1);
+              transition: all .4s ease-in-out;
+              transform: scale(1.1);
+            }
+          }
+          a {
+            text-decoration: none;
+          }
+    }
+    
+}
